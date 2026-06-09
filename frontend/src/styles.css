@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  min-height: 100vh;
+  gap: 1rem;
+  padding: 1rem;
+  background: linear-gradient(180deg, #0c1221 0%, #111827 100%);
+}
+
+.panel {
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.3);
+}
+
+.panel h2 {
+  margin-top: 0;
+}
+
+button,
+select {
+  width: 100%;
+  font-size: 0.95rem;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: #111827;
+  color: #e2e8f0;
+}
+
+button:hover,
+select:hover {
+  background: #1f2937;
+}
+
+.game-canvas {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  background: #040810;
+  display: block;
+}
+
+.status-line {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.stats-list,
+.inventory-list,
+.log-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+
+.stats-list li,
+.inventory-list li,
+.log-list li {
+  padding: 0.55rem 0;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+}
+
+.log-list li {
+  font-size: 0.88rem;
+}

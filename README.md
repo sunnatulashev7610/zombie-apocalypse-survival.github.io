@@ -1,147 +1,91 @@
 # Zombie Apocalypse Survival Game 🧟‍♂️
 
-A multiplayer post-apocalyptic survival game built with React, Node.js, and WebSocket. Players must gather resources, conquer territories, and survive against zombies and other players.
+A complete 2D top-down multiplayer survival game scaffold with a React client and Node.js backend. Players explore five zombie zones, choose a class, fight enemies, collect loot, and battle for zone control.
 
-## 🎮 Game Features
+## 🚀 What’s Included
 
-- **5 Dynamic Map Zones** - Abandoned City, Quarantine Zone, Factory, Dark Forest, Safe Haven
-- **4 Character Classes** - Soldier, Medic, Scout, Engineer
-- **Multiplayer Support** - 2-8 players per session
-- **Resource Management** - Food, Ammo, Medicine, Parts, Armor
-- **PvP & PvE** - Cooperation and competition mixed gameplay
-- **Progressive Difficulty** - Different threat levels per zone
+- **Frontend**: React + TypeScript client with real-time canvas rendering
+- **Backend**: Express + Socket.IO server for authoritative multiplayer state
+- **Multiplayer**: 2-8 players per session, synchronized movement and actions
+- **Map Regions**: Abandoned City, Quarantine Zone, Abandoned Factory, Dark Forest, Safe Haven
+- **Classes**: Soldier, Medic, Scout, Engineer
+- **AI Enemies**: Basic zombie, fast zombie, tank mutant, stealth creature, robot enemy
+- **Core Systems**: combat, inventory, abilities, progression, matchmaking, zone mechanics
 
-## 📁 Project Structure
+## 📁 Repository Structure
 
 ```
-zombie-apocalypse-survival/
-├── frontend/          # React + TypeScript frontend
-├── backend/           # Node.js + Express backend
-├── docs/              # Game documentation and design
-├── assets/            # Images, sounds, sprites
-├── .gitignore         # Git ignore rules
-├── README.md          # This file
-└── package.json       # Project metadata
+/zombie-apocalypse-survival.github.io
+├── backend/           # Node.js game server
+│   ├── src/
+│   │   ├── index.ts
+│   │   └── game/
+│   │       ├── engine.ts
+│   │       ├── server.ts
+│   │       └── types.ts
+├── frontend/          # React client app
+│   ├── src/
+│   │   ├── App.tsx
+│   │   ├── main.tsx
+│   │   ├── styles.css
+│   │   └── game/
+│   │       ├── engine.ts
+│   │       └── types.ts
+├── docs/              # Design and API documentation
+├── assets/            # Placeholder for art and audio
+├── .gitignore
+└── README.md
 ```
 
-## 🚀 Quick Start
+## 🧩 Quick Start
 
-### Prerequisites
-- Node.js 16+
-- npm or yarn
-- Git
+### Install dependencies
 
-### Installation
-
-1. Clone the repository:
 ```bash
-git clone https://github.com/sunnatulashev7610/zombie-apocalypse-survival.git
-cd zombie-apocalypse-survival
-```
-
-2. Install dependencies:
-```bash
-# Frontend
-cd frontend
+cd /workspaces/zombie-apocalypse-survival.github.io/frontend
 npm install
 
-# Backend (in another terminal)
 cd ../backend
 npm install
 ```
 
-3. Start development servers:
-```bash
-# Frontend (runs on http://localhost:3000)
-cd frontend
-npm start
+### Start backend server
 
-# Backend (runs on http://localhost:5000)
+```bash
 cd backend
-npm start
+npm run dev
 ```
 
-## 🎯 Game Rules
+### Start frontend client
 
-1. **Objective**: Survive and conquer all 5 zones
-2. **Resources**: Collect food, ammo, medicine, parts, armor
-3. **Enemies**: Fight zombies and mutated creatures
-4. **PvP Zone**: Safe Haven is the only PvP area
-5. **Win Condition**: Control all zones or be last survivor in Safe Haven
+```bash
+cd frontend
+npm run dev
+```
 
-## 👥 Character Classes
+Open the browser at the Vite URL (usually `http://localhost:3000`).
 
-| Class | Strength | Weakness |
-|-------|----------|----------|
-| **Soldier** | High damage | Low speed, fast energy loss |
-| **Medic** | Heal teammates | Low combat damage |
-| **Scout** | Fast, stealthy | Low armor |
-| **Engineer** | Build structures | Weak in melee |
+## 🎮 Core Gameplay
 
-## 🗺️ Map Zones
+- Players join a match and select a class.
+- Move with WASD and use ability with spacebar.
+- Fight zombies with class-specific strengths.
+- Survive region hazards and collect loot.
+- Endgame unfolds in Safe Haven for PvP and final survival.
 
-### 1. Abandoned City
-- **Enemies**: Basic zombies, bandits
-- **Resources**: Health packs, weapon parts
-- **Special**: Valuable items on rooftops
+## 📚 Documentation
 
-### 2. Quarantine Zone
-- **Enemies**: Mutated zombies (strong)
-- **Resources**: Armor, antidotes, boosters
-- **Special**: Can be secured safely
-
-### 3. Abandoned Factory
-- **Enemies**: Mechanical/robotic enemies
-- **Resources**: Crafting materials, minerals
-- **Special**: High risk, high reward
-
-### 4. Dark Forest
-- **Enemies**: Hidden zombies, mutated creatures
-- **Resources**: Food, hidden treasures, hunting weapons
-- **Special**: Low light, ideal for stealth
-
-### 5. Safe Haven
-- **Enemies**: Other players (PvP only)
-- **Resources**: Trading post, storage
-- **Special**: Final battle zone
-
-## 📊 Tech Stack
-
-- **Frontend**: React 18 + TypeScript
-- **Backend**: Node.js + Express
-- **Real-time**: WebSocket (Socket.io)
-- **Database**: MongoDB + Redis
-- **Game Engine**: Phaser 3 or Three.js
-- **Styling**: Tailwind CSS
-
-## 📖 Documentation
-
-See detailed documentation in `/docs`:
 - [Game Design Document](./docs/GAME_DESIGN.md)
 - [API Documentation](./docs/API.md)
 - [Architecture Guide](./docs/ARCHITECTURE.md)
 
-## 🤝 Contributing
+## 🧠 Game Systems
 
-Contributions are welcome! Please follow these steps:
+- **Combat**: AI chases players and applies damage, player abilities influence nearby threats.
+- **Multiplayer**: Real-time synchronization through Socket.IO.
+- **Zones**: Each region features unique enemies, loot, and mechanics.
+- **Progression**: XP, levels, and inventory items support player growth.
 
-1. Create a feature branch: `git checkout -b feature/amazing-feature`
-2. Commit changes: `git commit -m 'Add amazing feature'`
-3. Push to branch: `git push origin feature/amazing-feature`
-4. Open a Pull Request
+## 📝 Notes
 
-## 📝 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 👨‍💻 Author
-
-**Sunnatula Shev** (@sunnatulashev7610)
-
-## 🎮 Status
-
-**Current Phase**: MVP Development
-
----
-
-*Join us in creating an epic zombie apocalypse survival experience!* 🧟‍♂️🎮
+This repository contains a foundational multiplayer survival game project. You can extend it with sprites, audio, better matchmaking, PvP rules, and a full crafting system.
